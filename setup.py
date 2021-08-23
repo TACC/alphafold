@@ -40,7 +40,13 @@ setup(
         'numpy',
         'scipy',
         'tensorflow',
+        'Click',
     ],
+    entry_points={
+        'console_scripts': [
+            'af2 = alphafold.data.tools.cli:cli',
+        ],
+    },
     tests_require=['mock'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',

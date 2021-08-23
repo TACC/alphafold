@@ -107,7 +107,7 @@ $DOWNLOAD_DIR/                             # Total: ~ 2.2 TB (download: 438 GB)
         mmcif_files/
             # About 180,000 .cif files.
         obsolete.dat
-    small_fbd/                             # ~ 17 GB (download: 9.6 GB)
+    small_bfd/                             # ~ 17 GB (download: 9.6 GB)
         bfd-first_non_consensus_sequences.fasta
     uniclust30/                            # ~ 86 GB (download: 24.9 GB)
         uniclust30_2018_08/
@@ -273,6 +273,10 @@ The contents of each output file are as follows:
         serve for a visualisation of domain packing confidence within the
         structure.
 
+The pLDDT confidence measure is stored in the B-factor field of the output PDB
+files (although unlike a B-factor, higher pLDDT is better, so care must be taken
+when using for tasks such as molecular replacement).
+
 This code has been tested to match mean top-1 accuracy on a CASP14 test set with
 pLDDT ranking over 5 model predictions (some CASP targets were run with earlier
 versions of AlphaFold and some had manual interventions; see our forthcoming
@@ -319,7 +323,7 @@ For genetics:
 For templates:
 
 *   PDB: (downloaded 2020-05-14)
-*   PDB70: (downloaded 2020-05-13)
+*   PDB70: [2020-05-13](http://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/old-releases/pdb70_from_mmcif_200513.tar.gz)
 
 An alternative for templates is to use the latest PDB and PDB70, but pass the
 flag `--max_template_date=2020-05-14`, which restricts templates only to
